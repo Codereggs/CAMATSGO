@@ -102,7 +102,7 @@
   body {
     margin:inherit;
     overflow-x:hidden;
-    background-color: var(--third-color);
+    background-color: var(--secondary-color);
   }
   
   img {
@@ -327,9 +327,22 @@ a {
   color: var(--text-primary-color);
 }
 
+/*Button Credit Card*/
+div#CCbtn {
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem 1rem 3rem 1rem;
+}
+
+.button {
+  background-color: var(--anchor-hover) !important;
+  width:40%;
+  border-radius: 20px;
+}
 
 /*Footer*/
 
 .footer {
   height: 300px;
 }
+
