@@ -399,3 +399,21 @@ $(function () {
     })
     .trigger('redraw.bs.charts')
 });
+
+const $retirosArsBtn = document.getElementById("retiros"),
+$depositoArsBtn = document.getElementById("depositos");
+
+document.addEventListener("click",e=>{
+console.log(e.target);
+  if(e.target.matches("#retBtn"))
+  {
+    $retirosArsBtn.classList.remove("oculto");
+    $depositoArsBtn.classList.add("oculto");
+  };
+  if(e.target.matches("#depoBtn"))
+  {
+    $depositoArsBtn.classList.remove("oculto");
+    $retirosArsBtn.classList.add("oculto");
+  }
+
+});
