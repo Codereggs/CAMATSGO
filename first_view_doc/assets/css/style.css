@@ -14,3 +14,42 @@
     
 }
 
+.pesosarg {
+    margin-bottom: 1rem;
+}
+
+.ope {
+    width: 100%;
+    margin:1rem auto;
+    text-align: center;
+}
+.ope h2{
+    width:fit-content;
+}
+#depositos, #retiros {
+    margin: 1rem auto;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    color: black !important ;
+    text-align: start;
+}
+#depositos {
+    text-align: start;
+}
+
+#depositos .container {
+text-align: end;
+}
+
+#depositos h2, #retiros h2 {
+    color: #000;
+}
+
+.estaActivo {
+    background-color: white;
+    color: #000 !important;
+    padding: 0 0.5rem 1rem 0.5rem;
+    border-radius: 5px 5px 0 0;
+}
+

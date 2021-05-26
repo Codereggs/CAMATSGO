@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,14 +10,14 @@
 
     <title>
       
-        Depósitos y Retiros &middot; 
+        Operaciones &middot; 
       
     </title>
     
 
     <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
-      <link href="assets/css/toolkit-inverse.css" rel="stylesheet">
+    <link href="assets/css/toolkit-inverse.css" rel="stylesheet">
     
     
     <link href="assets/css/application.css" rel="stylesheet">
@@ -37,7 +37,7 @@
 <body>
 
 
-    <!-- Menú -->
+  
     <nav class="navbar navbar-expand-lg navbar-primary bg-light">
       <a class="navbar-brand" href="#">CAMATSGO</a>      
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -57,60 +57,56 @@
             </button>
             
           </div>
-
+          <!--MENU-->
           <div class="collapse nav-toggleable-md" id="nav-toggleable-md">
-            <form class="sidebar-form">
-              <input class="form-control" type="text" placeholder="Search...">
-              <button type="submit" class="btn-link">
-                <span class="icon icon-magnifying-glass"></span>
-              </button>
-            </form>
             <ul class="nav nav-pills nav-stacked flex-column">
-              <li class="nav-header">Dashboards</li>
+              <li class="nav-header">Menú</li>
               <li class="nav-item">
-                <a class="nav-link active" href="index.html">Vista Principal</a>
+                <a class="nav-link" href="home.html">Vista Principal</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link " href="order-history/index.html">Historial de Ordenes</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link "href="fluid/index.html">Fluid layout</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="icon-nav/index.html">Icon nav</a>
-              </li>
-
-              <li class="nav-header">More</li>
-              <li class="nav-item">
-                <a class="nav-link "href="docs/index.html">
-                  Toolkit docs
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Billetera
                 </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="home.html">Pesos Argentinos</a>
+                  <a class="dropdown-item" href="#">BTC</a>
+                </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="http://getbootstrap.com" target="blank">
-                  Bootstrap docs
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Operaciones
                 </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="homeOperation.html">Pesos Argentinos</a>
+                  <a class="dropdown-item" href="#">BTC</a>
+                </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link " href="index-light/index.html">Light UI</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#docsModal" data-toggle="modal">
-                  Example modal
-                </a>
+                <a class="nav-link "href="fluid/index.html">Cerrar Sesion</a>
               </li>
             </ul>
             <hr class="visible-xs mt-3">
           </div>
+          <!-- FIN MENU -->
         </nav>
       </div>
       <div class="col-md-9 content">
         <div class="dashhead">
           <div class="dashhead-titles">
-           <h2><a id="depoBtn">Depósitos</a> & <a id="retBtn">Retiros</a></h2>
+           <h2 class="pesosarg">Pesos Argentinos</h2><hr>
+           
+          </div>
+          <div class="btn-toolbar dashhead-toolbar">
+            <div id="fechaYHora"></div>
+            <!--Fecha y hora-->
           </div>
         </div>
+
+        
+        <div class="ope col-md-6"><h2><a id="depoBtn" class="estaActivo">Depósitos</a> & <a id="retBtn">Retiros</a></h2></div>
         <div class="col-md-6" id="depositos"><h2>Depósitos</h2>
+          <div class="container">
         <label for="imp">Importe</label>
         <input id="imp" type="text" name="Importe" placeholder="Monto">
         <br>
@@ -120,11 +116,12 @@
         <label for="imp">CCV</label>
         <input id="imp" type="text" name="CCV" placeholder="Código Seguridad">
         <br>
-        <input type="submit" value="Confirmar">
-        
+        <input class="confBtn" type="submit" value="Confirmar">
+      </div>
         </div>
 
-        <div class="col-md-6 oculto" id="retiros"><h2>Retiros</h2><label for="imp">Importe</label>
+        <div class="col-md-6 oculto" id="retiros"><h2>Retiros</h2>
+          <label for="imp">Importe</label>
           <input id="imp" type="text" name="Importe" placeholder="Monto">
           <br>
           <label for="imp">Número Tarjeta</label>
@@ -145,6 +142,8 @@
     <script src="assets/js/tablesorter.min.js"></script>
     <script src="assets/js/toolkit.js"></script>
     <script src="assets/js/application.js"></script>
+    <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+    <script src="assets/js/main.js" type="module"></script>
     <script>
       // execute/clear BS loaders for docs
       $(function(){while(window.BS&&window.BS.loader&&window.BS.loader.length){(window.BS.loader.pop())()}})

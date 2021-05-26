@@ -400,20 +400,29 @@ $(function () {
     .trigger('redraw.bs.charts')
 });
 
+/*FUNCION PARA BOTONES DEPOSITO Y RETIRO*/
+
 const $retirosArsBtn = document.getElementById("retiros"),
-$depositoArsBtn = document.getElementById("depositos");
+$depositoArsBtn = document.getElementById("depositos"),
+$retiroBtn = document.getElementById("retBtn"),
+$depositoBtn = document.getElementById("depoBtn");
 
 document.addEventListener("click",e=>{
-console.log(e.target);
-  if(e.target.matches("#retBtn"))
+
+  if(e.target === $retiroBtn)
   {
     $retirosArsBtn.classList.remove("oculto");
     $depositoArsBtn.classList.add("oculto");
+    $retiroBtn.classList.add("estaActivo");
+    $depositoBtn.classList.remove("estaActivo");
+    
   };
-  if(e.target.matches("#depoBtn"))
+  if(e.target === $depositoBtn)
   {
     $depositoArsBtn.classList.remove("oculto");
     $retirosArsBtn.classList.add("oculto");
+    $retiroBtn.classList.remove("estaActivo");
+    $depositoBtn.classList.add("estaActivo");
   }
 
 });
