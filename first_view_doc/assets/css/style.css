@@ -33,12 +33,13 @@
     border-radius: 5px;
     color: black !important ;
     text-align: start;
+    margin-bottom: 20rem;
 }
-#depositos {
+#depositos, #retiros {
     text-align: start;
 }
 
-#depositos .container {
+#depositos .container, #retiros .container {
 text-align: end;
 }
 
@@ -52,4 +53,50 @@ text-align: end;
     padding: 0 0.5rem 1rem 0.5rem;
     border-radius: 5px 5px 0 0;
 }
+
+/*Footer*/
+
+#footer {
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 30px;
+    padding: 30px 0;
+    position: absolute;
+    width: 100%;
+    bottom:0;
+  }
+  
+  #footer h3 {
+    font-size: 36px;
+    font-weight: 700;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0 0 15px 0;
+  }
+  
+  #footer p {
+    font-size: 15;
+    font-style: italic;
+    font-weight: bold;
+    padding: 0;
+    margin: 0 0 0 0;
+  }
+  
+  #footer .credits {
+    font-size: 13px;
+  }
+  
+  #footer .credits a {
+    color: #007bff;
+  }
+  
+  #footer .credits a:hover {
+    color: #83c3ff;
+  }
+  
+
+
 
