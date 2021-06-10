@@ -4,7 +4,8 @@ w = window;
 
 export default function signIn (classBtn) {
    const $classBtn = d.querySelector(classBtn);
-    $classBtn.addEventListener("click", () => {
+    d.addEventListener("click", (e) => {
+        if(e.target === $classBtn)
         location.href = "./first_view_doc/home.html";
     })
 }

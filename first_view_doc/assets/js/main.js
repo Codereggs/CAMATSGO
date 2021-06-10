@@ -1,3 +1,4 @@
+import CRUDtransacciones from "./module/CRUDtransacciones.js";
 import fechaYHora from "./module/fechaYHora.js";
 import precioBtc from "./module/precioBTC.js";
 
@@ -12,5 +13,6 @@ d.addEventListener('DOMContentLoaded', (e)=> {
     fechaYHora("fechaYHora");
     //Precio de bitcoin
     precioBtc("precioBtc");
-
+    //CRUD transacciones
+    CRUDtransacciones();
 })

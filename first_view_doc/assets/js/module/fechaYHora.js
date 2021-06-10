@@ -12,6 +12,4 @@ export default function fechaYHora (id) {
         setTimeout(function() {tiempo()},1000);
     };
     tiempo();
-
-
 }

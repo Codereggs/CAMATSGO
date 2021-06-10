@@ -142,7 +142,6 @@ document.addEventListener("DOMContentLoaded", function () {
     
     //pop in the appropriate card icon when detected
     cardnumber_mask.on("accept", function () {
-        console.log(cardnumber_mask.masked.currentMask.cardtype);
         switch (cardnumber_mask.masked.currentMask.cardtype) {
             case 'american express':
                 ccicon.innerHTML = amex;
@@ -279,11 +278,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     });
 
-    
-    document.addEventListener("click", (e) => {
-        if(e.target.matches(".CCbtn")) {
-            location.href = "index.html";
-        }
-    })
+   
 
 
