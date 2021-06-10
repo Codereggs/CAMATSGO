@@ -12,7 +12,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
     //Boton de registro,nombres de ids
     registerBtn(".registerBtn","email","name","dni","phone","registerPass","confPass");
     //CRUD usuarios
-    CRUDusuarios("#name","#cardnumber","#expirationdate","#securitycode",".CCbtn",".form-container");
+    CRUDusuarios("#cardnumber","#securitycode",".CCbtn");
     //Boton inicio de sesion
     signIn(".signInBtn");
 
