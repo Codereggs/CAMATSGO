@@ -11,9 +11,8 @@ export default function precioBtc (id) {
     const getAll = async () => {
       let res = await fetch("https://api-node-exchange.herokuapp.com/value"),
       json = await res.json();
-      
-      console.log(json);
-      $id.innerHTML= `Precio BTC/ARS: ${json.bitcoin.ars}.`;
+  
+      if($id !== null) $id.innerHTML= `Precio BTC/ARS: ${json.bitcoin.ars}.`;
     
     }
     getAll();

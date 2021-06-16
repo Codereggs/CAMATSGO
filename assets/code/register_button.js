@@ -39,14 +39,15 @@ export default function registerBtn(
         /^(?:(?:00||\S)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/;
       return regexNumber.test(numero);
     },
-    esPassword = (clave = $pass.value) => {
-      let regexPass =
-        /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/;
-      return regexPass.test(clave);
+    esDNI = (dniArg) => {
+      let regexDni =
+      /^\d{8}(?:[-\s]\d{4})?$/;
+      return regexDni.test(dniArg);
     },
     reseteo = () => {
       location.reload();
     };
+
   //Declaracion variables a rellenar
   let campoVacio = "",
     mensajeError = "";
@@ -81,6 +82,10 @@ export default function registerBtn(
       if (isEmail($email.value) === false && $email.value != "")
         mensajeError += `Tu dirección de email ${$email.value} no es válida.`;
 
+      //Validamos el formato del DNI
+      if (esDNI($id.value) === false && $id.value != "")
+      mensajeError += `El DNI ${$id.value} no es válido.`;
+
       // Validación numérica del campo teléfono
       if (esNumero($phone.value) === false && $phone.value != "")
         mensajeError += `Tu teléfono no es válido.`;
@@ -94,7 +99,7 @@ export default function registerBtn(
       )
         mensajeError += `La contraseña debe tener entre 8 y 16 caracteres, al menos un dígito, al menos una minúscula, al menos una mayúscula y al menos dos caracter no alfanumérico`;
 
-      // Confirmación del password
+      //Confirmación del password
       const confirmarPassword = () => {
         if ($pass.value != $confPass.value && $confPass.value != "") {
           mensajeError += `La confirmación de su contraseña no es válida, por favor escríbalo igualmente a la original.`;
@@ -102,10 +107,29 @@ export default function registerBtn(
       };
       confirmarPassword();
 
+//Peticion asincrona validacion con BD
+try {
+  const obtenerTodo = async () => {
+  let resp = await fetch(
+    "https://apiusuarioscamatsgo.herokuapp.com/"
+  ),
+  json = await resp.json(); 
+   
+  if (!resp.ok)
+  throw { status: resp.status, statusText: resp.statusText }; 
+
+  for (let element of json) {
+
+    if(element.emailUser === $email.value) return alert ("El usuario ya existe.");
+    if(element.docUser === $id.value) return alert ("El DNI ingresado ya existe.");
+          
+    if(json.indexOf(element) === json.length-1) {
       if (mensajeError != "") {
         alert(mensajeError);
         return desaparecer();
       }
+
+
       //Almacenar en symbol
       usuario[symbolU] = [
         $name.value,
@@ -117,6 +141,19 @@ export default function registerBtn(
       ls.setItem("x", usuario[symbolU]);
       $DOMclass.setAttribute("target", "_blank");
       location.href = "credit_card_input.html";
+    }
+  } 
+  }
+  obtenerTodo();
+} catch (err) {
+    let message = err.statusText || "Ocurrió un error";
+    console.log(`Error ${err.status}: ${message}`);
+}
+
+//FIN PETICION
+
+      
+      
     }
   });
 }

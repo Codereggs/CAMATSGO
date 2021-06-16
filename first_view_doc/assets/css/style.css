@@ -4,6 +4,10 @@
     align-items:  center;
 }
 
+.walletDiv img {
+  width: 30%;
+}
+
 #operationBtn {
     margin: 0 auto;
     width: 100%;
@@ -98,5 +102,9 @@ text-align: end;
   }
   
 
+/*SALDOS*/
 
+#saldoARS , #saldoBTC {
+  font-size: 2rem;
+}
 
