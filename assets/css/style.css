@@ -8,6 +8,8 @@
     --anchor-hover: #007bff;
 }
 
+
+
 /*Tamaño Responsive*/
 
 :root {
@@ -346,3 +348,38 @@ div#CCbtn {
   height: 300px;
 }
 
+
+#darkModeButton {
+  display: flex;
+  align-items: center;
+  background-image: url("/MinipaginaDOM/accesorios/img/Luna.png");
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--main-color);
+  width:70px;
+  height: 58px;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  transition: background-color .3s;
+  z-index: 996;
+  
+}
+
+#darkModeButton img{
+
+  margin:auto;
+  width:70%; 
+
+}
+
+#darkModeButton:hover {
+  cursor: pointer;
+  background-color: var(--darkMode-color);
+}
+
+#darkModeButton:focus {
+  outline: -webkit-focus-ring-color auto 1px;
+}

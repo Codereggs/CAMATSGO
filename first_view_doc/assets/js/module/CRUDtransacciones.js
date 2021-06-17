@@ -3,16 +3,31 @@ const d = document,
   n = navigator,
   ls = localStorage;
 
-let ID, saldoBTC, saldoARS;
+let ID, saldoBTC = null, saldoARS = null,datosUsuario;
 
-export default function CRUDtransacciones(deleteBtn) {
+export default function CRUDtransacciones(deleteBtn,importeDEP,nroTarjetaDEP,CCVDEP,confBtnDEP,importeRET,nroTarjetaRET,botonRET) {
 
   //Constantes
-  const $deleteBtn = d.querySelector(deleteBtn);
+  const $deleteBtn = d.querySelector(deleteBtn),
+  $nroTarjDEP = d.querySelector(nroTarjetaDEP),
+  $confBtnDEP = d.querySelector(confBtnDEP),
+  $impDEP = d.querySelector(importeDEP),
+  $CCVDEP = d.querySelector(CCVDEP),
+  $impRET = d.querySelector(importeRET),
+  $nroTarjetaRET = d.querySelector(nroTarjetaRET),
+  $botonRET = d.querySelector(botonRET);
 
   //Traer mi ID
   ID = w.location.search;
   ID = ID.replace("?","");
+
+  //Funcion eliminar todo
+  const deleteData = () => {
+    $CCVDEP.value = "";
+    $impDEP.value = "";
+    $impRET.value = "";
+  }
+
 
 
   //Iniciar en el click al boton darse de baja
@@ -52,9 +67,157 @@ export default function CRUDtransacciones(deleteBtn) {
         }
       } 
     }
+    //COMPRA VENTA ARS BTC
+    //DEPOSITO ARS
+    if(e.target === $confBtnDEP) {
+      //Primera transaccion POST
+      let primeraTransaccion;
+      if(saldoARS === null && saldoBTC === null) primeraTransaccion = true;
+      if(primeraTransaccion) {
+        if(parseInt($CCVDEP.value) !== datosUsuario.securityCode) return alert("Su transacción no puede ser procesada, por favor verifique su código de seguridad.");
+        //POST
+        try {
+          const primeraTrans = async () => {
+            alert("Realizando su primer depósito.");
+  
+            let options = {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  _id: ID,
+                  amount: $impDEP.value,
+                }),
+              },
+              resp = await fetch(
+                "https://api-node-exchange.herokuapp.com/cuentas/depositoars",
+                options
+              ),
+              json = await resp.json();       
+                console.log(json);
+            if (!resp.ok)
+              throw { status: resp.status, statusText: resp.statusText };
+                   };
+                   //Ejecucion
+                   primeraTrans();
+                   deleteData();
+                   
+                   
+        } catch (err) {
+          let message = err.statusText || "Ocurrió un error";
+          console.log(`Error ${err.status}: ${message}`);
+        }
+      }
+      else {
+        if(parseInt($CCVDEP.value) !== datosUsuario.securityCode) return alert("Su transacción no puede ser procesada, por favor verifique su código de seguridad.");
+        //PUT
+        try {
+          const depositoARS = async () => {
+            alert("Realizando su depósito en ARS.");
+            
+            let options = {
+                method: "PUT",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  _id: ID,
+                  amount: $impDEP.value,
+                }),
+              };
+              console.log(options.body);
+              let resp = await fetch(
+                "https://api-node-exchange.herokuapp.com/cuentas/depositoars",
+                options
+              ),
+              json = await resp.json();       
+               
+            if (!resp.ok)
+              throw { status: resp.status, statusText: resp.statusText };
+                   };
+                   //Ejecucion
+                   depositoARS();
+                   deleteData();
+
+        } catch (err) {
+          let message = err.statusText || "Ocurrió un error";
+          console.log(`Error ${err.status}: ${message}`);
+        }
+
+      }
+    }
+    //RETIRO ARS 
+
+    if(e.target === $botonRET) {
+      try {
+        const retiroARS = async () => {
+          alert("Realizando su retiro en ARS.");
+
+          let options = {
+              method: "PATCH",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                _id: `${ID}`,
+                amount: `${$impRET.value}`,
+              }),
+            },
+            resp = await fetch(
+              "https://api-node-exchange.herokuapp.com/cuentas/retiroars",
+              options
+            ),
+            json = await resp.json();       
+              console.log(json);
+          if (!resp.ok)
+            throw { status: resp.status, statusText: resp.statusText };
+                 };
+                 //Ejecucion
+                 retiroARS();
+                 deleteData();
+
+      } catch (err) {
+        let message = err.statusText || "Ocurrió un error";
+        console.log(`Error ${err.status}: ${message}`);
+      }
+    }
+
+
   });
+  
+//Consultar datos usuario
+try {
+  const dameloTodo = async () => {
+    let resp = await fetch(
+        `https://apiusuarioscamatsgo.herokuapp.com/${ID}`
+      ),
+      json = await resp.json();
+      if (!resp.ok)
+      throw { status: resp.status, statusText: resp.statusText };
+      //Colocar nro de tarjeta bloqueado
+      if($nroTarjDEP !== null) {
+        $nroTarjDEP.value = json.cardNumber;
+        $nroTarjDEP.setAttribute("readonly","readonly");
+      }
+      if($nroTarjetaRET !== null) {
+      $nroTarjetaRET.setAttribute("readonly","readonly");
+      $nroTarjetaRET.value = json.cardNumber;
+    }
+     
+      datosUsuario = json;
+  };
+  //Ejecución
+  dameloTodo();
+
+} catch (err) {
+  let message = err.statusText || "Ocurrió un error";
+  console.log(`Error ${err.status}: ${message}`);
+}
 
 }
+
+//Consultar saldos 
 
 export function consultaSaldos (grafico) {
   

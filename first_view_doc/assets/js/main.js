@@ -1,6 +1,7 @@
 import CRUDtransacciones, { consultaSaldos } from "./module/CRUDtransacciones.js";
 import depRet from "./module/depositos_retiros.js";
 import fechaYHora from "./module/fechaYHora.js";
+import darkMode from "./module/modo_oscuro.js";
 import precioBtc from "./module/precioBTC.js";
 import botonesVistaUsuario from "./module/viewChangeUser.js";
 
@@ -16,7 +17,7 @@ d.addEventListener('DOMContentLoaded', (e)=> {
     //Precio de bitcoin
     precioBtc("precioBtc");
     //CRUD transacciones
-    CRUDtransacciones("#deleteAcc");
+    CRUDtransacciones("#deleteAcc","#impars","#ntarjars","#ccv",".confBtn","#imp","#ntarj","#confRet");
     //Botones para mantener id usuario
     botonesVistaUsuario("vistaP","vistaBARS","vistaBBTC","opARS","opBTC","miPerfil","bindex");
     //Saldos
@@ -26,4 +27,5 @@ d.addEventListener('DOMContentLoaded', (e)=> {
     
 })
 
-
+//Modo Oscuro
+darkMode('#darkModeButton');

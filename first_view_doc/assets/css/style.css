@@ -32,10 +32,10 @@
 }
 #depositos, #retiros {
     margin: 1rem auto;
-    background-color: white;
+    background-color: var(--black-mode-color);
     padding: 1rem;
     border-radius: 5px;
-    color: black !important ;
+    color: var(--black-mode) !important ;
     text-align: start;
     margin-bottom: 20rem;
 }
@@ -48,12 +48,12 @@ text-align: end;
 }
 
 #depositos h2, #retiros h2 {
-    color: #000;
+    color: var(--black-mode);
 }
 
 .estaActivo {
-    background-color: white;
-    color: #000 !important;
+    background-color: var(--black-mode-color);
+    color: var(--black-mode) !important;
     padding: 0 0.5rem 1rem 0.5rem;
     border-radius: 5px 5px 0 0;
 }
@@ -107,4 +107,41 @@ text-align: end;
 #saldoARS , #saldoBTC {
   font-size: 2rem;
 }
+
+
+#darkModeButton {
+  display: flex;
+  align-items: center;
+  background-image: url("/MinipaginaDOM/accesorios/img/Luna.png");
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--anchor-hover);
+  width:70px;
+  height: 58px;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  transition: background-color .3s;
+  z-index: 996;
+  
+}
+
+#darkModeButton img{
+
+  margin:auto;
+  width:70%; 
+
+}
+
+#darkModeButton:hover {
+  cursor: pointer;
+  background-color: var(--black-mode-color);
+}
+
+#darkModeButton:focus {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
 

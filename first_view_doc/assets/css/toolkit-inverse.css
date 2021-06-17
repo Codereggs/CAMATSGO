@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -260,6 +261,17 @@ html {
 @-ms-viewport {
   width: device-width; }
 
+  /*Colores básicos*/
+:root {
+  --primary-color : white;
+  --secondary-color: #f5f7ff;
+  --third-color: gray;
+  --text-primary-color: #3b3b3b;
+  --text-hover: #b3b3b3;
+  --anchor-hover: #007bff;
+  --black-mode: #252830;
+  --blackBack-mode: #252830;
+}
 html {
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent; }
@@ -269,8 +281,8 @@ body {
   font-size: 0.9rem;
   font-weight: 300;
   line-height: 1.5;
-  color: #ffffff;
-  background-color: #252830; }
+  color: var(--black-mode);
+  background-color: var(--primary-color) }
 
 [tabindex="-1"]:focus {
   outline: none !important; }
@@ -426,7 +438,7 @@ h1, h2, h3, h4, h5, h6,
   font-family: inherit;
   font-weight: 300;
   line-height: 1.1;
-  color: white; }
+  color: var(--dark-mode); }
 
 h1, .h1 {
   font-size: 2.5rem; }
@@ -9402,11 +9414,11 @@ canvas {
 
 /* simple contextual color overrides */
 .nav > li > a {
-  color: #cfd2da; }
+  color: var(--dark-mode); }
 
 .nav > li > a:hover,
 .nav > li > a:focus {
-  color: #fff; }
+  color: var(--text-hover); }
 
 .form-control {
   box-shadow: none; }
