@@ -11,7 +11,7 @@ export default function darkMode (btn) {
         d.body.style.setProperty("color","var(--text-primary-color)");
         $darkModeBtn.style.setProperty("border","1px solid var(--primary-color)");
         d.documentElement.style.setProperty("--black-mode-color","rgb(0, 0, 0, 0.7)");
-        $darkModeBtn.style.setProperty("background-image",`url("/MinipaginaDOM/accesorios/img/Sol.png")`);
+        $darkModeBtn.style.setProperty("background-image",`url("assets/img/Sol.png")`);
         ls.setItem("theme","light");
         return day = false;
     },
@@ -20,7 +20,7 @@ export default function darkMode (btn) {
         d.body.style.setProperty("color","var(--primary-color)");
         $darkModeBtn.style.setProperty("border","1px solid var(--nav-color)");
         d.documentElement.style.setProperty("--black-mode-color","rgb(255, 255, 255)");
-        $darkModeBtn.style.setProperty("background-image",`url("/MinipaginaDOM/accesorios/img/Luna.png")`);
+        $darkModeBtn.style.setProperty("background-image",`url("assets/img/Luna.png")`);
         ls.setItem("theme","dark");
         return day = true;
 

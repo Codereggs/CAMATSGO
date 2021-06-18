@@ -159,3 +159,6 @@ export default function CRUDusuarios(cardNumber, SC, TDCbtn,login,user,pass,date
 
   });
 }
+
+
+
