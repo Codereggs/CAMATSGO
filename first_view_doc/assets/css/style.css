@@ -149,3 +149,28 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none; 
   margin: 0; 
 }
+
+/* PERFIL */
+
+.miPerfil {
+  background-color: inherit;
+  height: 30rem;
+  margin: 1rem;
+  margin-bottom: 10rem;
+  padding: 1rem;
+  border-radius: 2%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.datosPerfil {
+  display:inherit;
+  justify-content: space-between;
+}
+
+.btnPerfil {
+ margin-top: 1rem;
+ align-self: center;
+
+}

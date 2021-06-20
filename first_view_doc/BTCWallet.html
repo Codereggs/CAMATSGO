@@ -14,7 +14,7 @@
       
     </title>
     
-
+    <script src="assets/js/sorttable.js"></script>
     <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/toolkit-inverse.css" rel="stylesheet">
@@ -150,15 +150,9 @@
   
     
     <div class="flextable table-actions">
-      <div class="flextable-item flextable-primary">
-        <div class="btn-toolbar-item input-with-icon">
-          <input type="text" class="form-control input-block" placeholder="Buscar">
-          <span class="icon icon-magnifying-glass"></span>
-        </div>
-      </div>
       <div class="flextable-item">
         <div class="btn-group">
-          <button type="button" class="btn btn-outline-primary">
+          <button id="botonBorrar" type="button" class="btn btn-outline-primary">
             <span class="icon icon-erase"></span>
           </button>
         </div>
@@ -166,7 +160,7 @@
     </div>
     
     <div class="table-responsive">
-      <table class="table" data-sort="table">
+      <table class="table sortable" data-sort="table">
         <thead>
           <tr>
             <th><input type="checkbox" class="select-all" id="selectAll"></th>
@@ -176,13 +170,7 @@
             <th>Importe</th>
           </tr>
         </thead>
-        <tbody>
-         <tr>
-            <td><input type="checkbox" class="select-row"></td>
-            <td><a href="#">#10020</a></td>
-            <td>Venta</td>
-            <td>01/08/2021</td>
-            <td>$200.00</td>
+        <tbody id="datosTablaBTC">
         </tbody>
       </table>
     </div>

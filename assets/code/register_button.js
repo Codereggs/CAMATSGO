@@ -44,6 +44,11 @@ export default function registerBtn(
       /^\d{8}(?:[-\s]\d{4})?$/;
       return regexDni.test(dniArg);
     },
+    esNombre = (Nombre) => {
+      let regexNombre =
+      /^(?!.* $)[A-Z][a-z ]+$/ig;
+      return regexNombre.test(Nombre);
+    },
     reseteo = () => {
       location.reload();
     };
@@ -89,6 +94,9 @@ export default function registerBtn(
       // Validación numérica del campo teléfono
       if (esNumero($phone.value) === false && $phone.value != "")
         mensajeError += `Tu teléfono no es válido.`;
+      // Validación Nombre
+      if (esNombre($name.value) === false && $name.value != "") mensajeError += 'Ingrese un nombre válido.'
+      
 
       //Validación campo password y confirmación password
       if (

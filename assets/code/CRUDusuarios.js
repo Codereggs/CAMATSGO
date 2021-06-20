@@ -119,6 +119,7 @@ export default function CRUDusuarios(cardNumber, SC, TDCbtn,login,user,pass,date
       }
     }
     //Inicio de Sesión
+
     if(e.target === $Login){
       if($user.value === "" || $pass.value === "") return alert("El campo usuario o contraseña están vacíos, por favor intente con un usuario y contraseña válidas.");
       try {
@@ -158,6 +159,8 @@ export default function CRUDusuarios(cardNumber, SC, TDCbtn,login,user,pass,date
 
 
   });
+
+  
 }
 
 
