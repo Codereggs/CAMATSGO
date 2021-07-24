@@ -1,47 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
 
-    <title>
-      
-        Operaciones Bitcoin &middot; 
-      
-    </title>
-    
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
 
-    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/toolkit-inverse.css" rel="stylesheet">
-    <link href="assets/css/application.css" rel="stylesheet">
+  <title>
 
-    <style>
-      /* note: this is a hack for ios iframe for bootstrap themes shopify page */
-      /* this chunk of css is not part of the toolkit :) */
-      body {
-        width: 1px;
-        min-width: 100%;
-        *width: 100%;
-      }
-    </style>
-  </head>
+    Operaciones Bitcoin &middot;
+
+  </title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/toolkit-inverse.css" rel="stylesheet">
+  <link href="assets/css/application.css" rel="stylesheet">
+
+  <style>
+    /* note: this is a hack for ios iframe for bootstrap themes shopify page */
+    /* this chunk of css is not part of the toolkit :) */
+    body {
+      width: 1px;
+      min-width: 100%;
+      *width: 100%;
+    }
+  </style>
+</head>
 
 
 <body>
 
 
-  
-    <nav class="navbar navbar-expand-lg navbar-primary bg-light">
-      <a class="navbar-brand" href="#">CAMATSGO</a>  
-      <label id="precioBtc" style="text-align: end; margin-right: 30px;">Precio BTC</label>    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-       
-      </div>
+
+  <nav class="navbar navbar-expand-lg navbar-primary bg-light">
+    <a class="navbar-brand" href="#">CAMATSGO</a>
+    <label id="precioBtc" style="text-align: end; margin-right: 30px;">Precio BTC</label>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    </div>
   </nav>
 
 
@@ -51,20 +52,22 @@
       <div class="col-md-3 sidebar">
         <nav class="sidebar-nav">
           <div class="sidebar-header">
-            <button class="nav-toggler nav-toggler-md sidebar-toggler" type="button" data-toggle="collapse" data-target="#nav-toggleable-md">
+            <button class="nav-toggler nav-toggler-md sidebar-toggler" type="button" data-toggle="collapse"
+              data-target="#nav-toggleable-md">
               <span class="sr-only">Toggle nav</span>
             </button>
-            
+
           </div>
           <!--MENU-->
           <div class="collapse nav-toggleable-md" id="nav-toggleable-md">
             <ul class="nav nav-pills nav-stacked flex-column">
               <li class="nav-header">Menú</li>
               <li class="nav-item">
-                <a id="vistaP"class="nav-link" href='home.html'>Vista Principal</a>
+                <a id="vistaP" class="nav-link" href='home.html'>Vista Principal</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
                   Billetera
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -73,27 +76,28 @@
                 </div>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
                   Operaciones
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a id="opARS" class="dropdown-item" href="homeOperation.html">Pesos Argentinos</a>
                   <a id="opBTC" class="dropdown-item" href="homeOperationBtcWallet.html">BTC</a>
                 </div>
-                <li class="nav-item">
-                  <a id="miPerfil" class="nav-link" href="miPerfil.html">Mi Perfil</a>
-                </li>
+              <li class="nav-item">
+                <a id="miPerfil" class="nav-link" href="miPerfil.html">Mi Perfil</a>
+              </li>
               </li>
               <li class="nav-item">
-                <a id="logout" class="nav-link "href="../index.html">Cerrar Sesion</a>
+                <a id="logout" class="nav-link " href="../index.html">Cerrar Sesion</a>
               </li>
             </ul>
             <hr class="visible-xs mt-3">
             <ul class="nav nav-pills nav-stacked flex-column">
-            <li class="nav-item">
-              <a id="deleteAcc" class="nav-link "href="#">Darse de baja</a>
-            </li>
-          </ul>
+              <li class="nav-item">
+                <a id="deleteAcc" class="nav-link " href="#">Darse de baja</a>
+              </li>
+            </ul>
           </div>
           <!-- FIN MENU -->
         </nav>
@@ -101,8 +105,8 @@
       <div class="col-md-9 content">
         <div class="dashhead">
           <div class="dashhead-titles">
-           <h2 class="pesosarg">Bitcoins</h2>
-           
+            <h2 class="pesosarg">Bitcoins</h2>
+
           </div>
           <div class="btn-toolbar dashhead-toolbar">
             <div id="fechaYHora"></div>
@@ -110,58 +114,65 @@
           </div>
         </div>
 
-        
-        <div class="ope col-md-6"><h2><a id="depoBtn" class="estaActivo">Compras</a> & <a id="retBtn">Ventas</a></h2></div>
-        <div class="col-md-6" id="depositos"><h2>Comprar</h2>
+
+        <div class="ope col-md-6">
+          <h2><a id="depoBtn" class="estaActivo">Compras</a> & <a id="retBtn">Ventas</a></h2>
+        </div>
+        <div class="col-md-6" id="depositos">
+          <h2>Comprar</h2>
           <div class="container">
-        <label for="compraBTC">Bitcoins</label>
-        <input id="compraBTC" type="number" name="BTC" placeholder="BTC">
-        <br>
-        <label for="depPesos">Pesos</label>
-        <input id="depPesos" type="number" name="ARS" placeholder="ARS">
-        <br>
-        <input id='btnBTCCOM' class="confBtn" type="submit" value="Confirmar">
-      </div>
+            <label for="compraBTC">Bitcoins</label>
+            <input id="compraBTC" type="number" name="BTC" placeholder="BTC">
+            <br>
+            <label for="depPesos">Pesos</label>
+            <input id="depPesos" type="number" name="ARS" placeholder="ARS">
+            <br>
+            <input id='btnBTCCOM' class="confBtn" type="submit" value="Confirmar">
+          </div>
         </div>
 
         <div class="col-md-6 oculto" id="retiros">
           <h2>Vender</h2>
           <div class="container">
-          <label for="ventaBTC">Bitcoins</label>
-          <input id="ventaBTC" type="number" name="BTC" placeholder="BTC">
-          <br>
-          <label for="retPesos">Pesos</label>
-          <input id="retPesos" type="number" name="ARS" placeholder="ARS">
-          <br>
-          <input id='btnBTCVEN' type="submit" value="Confirmar">
-        </div>
+            <label for="ventaBTC">Bitcoins</label>
+            <input id="ventaBTC" type="number" name="BTC" placeholder="BTC">
+            <br>
+            <label for="retPesos">Pesos</label>
+            <input id="retPesos" type="number" name="ARS" placeholder="ARS">
+            <br>
+            <input id='btnBTCVEN' type="submit" value="Confirmar">
+          </div>
         </div>
         <br>
 
+      </div>
     </div>
   </div>
-</div>
   </div>
 
-<!-- Boton modoOscuro -->
-  
-<a id="darkModeButton"></a>
+  <!-- Boton modoOscuro -->
+
+  <a id="darkModeButton"></a>
 
   <footer id="footer">
-    
+
     <div class="copyright">
       <p>
         ©<b>CAMATSGO.SA fintech</b> 2021.
       </p>
     </div>
-  </div>
+    </div>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-    <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
-    <script src="assets/js/main.js" type="module"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+  <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+  <script src="assets/js/main.js" type="module"></script>
 
-  </body>
+</body>
+
 </html>
-

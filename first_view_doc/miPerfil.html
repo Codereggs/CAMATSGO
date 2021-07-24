@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
 
-    <title>
-      
-        Vista Principal &middot; 
-      
-    </title>
-    
-    <script src="assets/js/sorttable.js"></script>
-    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/toolkit-inverse.css" rel="stylesheet">
-    <link href="assets/css/application.css" rel="stylesheet">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
 
-    <style>
-      /* note: this is a hack for ios iframe for bootstrap themes shopify page */
-      /* this chunk of css is not part of the toolkit :) */
-      body {
-        width: 1px;
-        min-width: 100%;
-        *width: 100%;
-      }
-    </style>
-  </head>
+  <title>
+
+    Vista Principal &middot;
+
+  </title>
+
+  <script src="assets/js/sorttable.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/toolkit-inverse.css" rel="stylesheet">
+  <link href="assets/css/application.css" rel="stylesheet">
+
+  <style>
+    /* note: this is a hack for ios iframe for bootstrap themes shopify page */
+    /* this chunk of css is not part of the toolkit :) */
+    body {
+      width: 1px;
+      min-width: 100%;
+      *width: 100%;
+    }
+  </style>
+</head>
 
 <body>
 
 
-    <!-- Menú -->
-    <nav class="navbar navbar-expand-lg navbar-primary bg-light">
-      <a class="navbar-brand" href="#">CAMATSGO</a>
-      <label id="precioBtc" style="text-align: end; margin-right: 30px;">Precio BTC</label>        
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-       
-      </div>
+  <!-- Menú -->
+  <nav class="navbar navbar-expand-lg navbar-primary bg-light">
+    <a class="navbar-brand" href="#">CAMATSGO</a>
+    <label id="precioBtc" style="text-align: end; margin-right: 30px;">Precio BTC</label>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    </div>
   </nav>
 
 
@@ -50,108 +51,122 @@
       <div class="col-md-3 sidebar">
         <nav class="sidebar-nav">
           <div class="sidebar-header">
-            <button class="nav-toggler nav-toggler-md sidebar-toggler" type="button" data-toggle="collapse" data-target="#nav-toggleable-md">
+            <button class="nav-toggler nav-toggler-md sidebar-toggler" type="button" data-toggle="collapse"
+              data-target="#nav-toggleable-md">
               <span class="sr-only">Toggle nav</span>
             </button>
-            
-          </div>
-                  <!--MENU-->
-                  <div class="collapse nav-toggleable-md" id="nav-toggleable-md">
-                    <ul class="nav nav-pills nav-stacked flex-column">
-                      <li class="nav-header">Menú</li>
-                      <li class="nav-item">
-                        <a id="vistaP"class="nav-link" href='home.html'>Vista Principal</a>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Billetera
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a id="vistaBARS" class="dropdown-item" href="home.html">Pesos Argentinos</a>
-                          <a id="vistaBBTC" class="dropdown-item" href="BTCWallet.html">BTC</a>
-                        </div>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Operaciones
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a id="opARS" class="dropdown-item" href="homeOperation.html">Pesos Argentinos</a>
-                          <a id="opBTC" class="dropdown-item" href="homeOperationBtcWallet.html">BTC</a>
-                        </div>
-                        <li class="nav-item">
-                          <a id="miPerfil" class="nav-link" href="miPerfil.html">Mi Perfil</a>
-                        </li>
-                      </li>
-                      <li class="nav-item">
-                        <a id="logout" class="nav-link "href="../index.html">Cerrar Sesion</a>
-                      </li>
-                    </ul>
-                    <hr class="visible-xs mt-3">
-                    <ul class="nav nav-pills nav-stacked flex-column">
-                    <li class="nav-item">
-                      <a id="deleteAcc" class="nav-link " href="#">Darse de baja</a>
-                    </li>
-                  </ul>
-                  </div>
 
-            <!--FIN MENU-->
+          </div>
+          <!--MENU-->
+          <div class="collapse nav-toggleable-md" id="nav-toggleable-md">
+            <ul class="nav nav-pills nav-stacked flex-column">
+              <li class="nav-header">Menú</li>
+              <li class="nav-item">
+                <a id="vistaP" class="nav-link" href='home.html'>Vista Principal</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  Billetera
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a id="vistaBARS" class="dropdown-item" href="home.html">Pesos Argentinos</a>
+                  <a id="vistaBBTC" class="dropdown-item" href="BTCWallet.html">BTC</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  Operaciones
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a id="opARS" class="dropdown-item" href="homeOperation.html">Pesos Argentinos</a>
+                  <a id="opBTC" class="dropdown-item" href="homeOperationBtcWallet.html">BTC</a>
+                </div>
+              <li class="nav-item">
+                <a id="miPerfil" class="nav-link" href="miPerfil.html">Mi Perfil</a>
+              </li>
+              </li>
+              <li class="nav-item">
+                <a id="logout" class="nav-link " href="../index.html">Cerrar Sesion</a>
+              </li>
+            </ul>
+            <hr class="visible-xs mt-3">
+            <ul class="nav nav-pills nav-stacked flex-column">
+              <li class="nav-item">
+                <a id="deleteAcc" class="nav-link " href="#">Darse de baja</a>
+              </li>
+            </ul>
+          </div>
+
+          <!--FIN MENU-->
         </nav>
       </div>
       <div class="col-md-9 content">
         <div class="dashhead">
-  <div class="dashhead-titles">
-    <h2 class="dashhead-title">Mi Perfil
-    </h2>
-  </div>
-  
-  <div class="btn-toolbar dashhead-toolbar">
-    <div id="fechaYHora"></div>
-    <!--Fecha y hora-->
-         </div>
-      </div>
-      <div class="container">
+          <div class="dashhead-titles">
+            <h2 class="dashhead-title">Mi Perfil
+            </h2>
+          </div>
+
+          <div class="btn-toolbar dashhead-toolbar">
+            <div id="fechaYHora"></div>
+            <!--Fecha y hora-->
+          </div>
+        </div>
+        <div class="container">
           <div class="miPerfil">
             <h2>Datos Personales<img src="assets/img/edit.svg" alt="editar" style="width:20px;margin-left:4%"></h2>
-            <div class="datosPerfil"><label for="emailIn" id="emailUser"></label><input type="text" name="" id="emailIn"></div>
-            <div class="datosPerfil"><label for="nameIn"  id="nameLastName"></label><input type="text" id="nameIn" disabled></div>
-            <div class="datosPerfil"><label for="docIn" id="docUser"></label><input type="text" name="" id="docIn"disabled></div>
-            <div class="datosPerfil"><label for="phoneIn" id="phoneUser"></label><input type="number" name="" id="phoneIn" onkeydown="return event.keyCode !== 69"></div>
-            <div class="datosPerfil"><label for="cardIn" id="cardNumber"></label><input id="cardIn" type="text" pattern="[0-9]*" maxlength="16" onkeydown="return event.keyCode !== 69"></div>
-            <div class="datosPerfil"><label for="ccvIn" id="ccvNumber"></label><input type="text" name="" id="ccvIn" maxlength="4" onkeydown="return event.keyCode !== 69"></div>
+            <div class="datosPerfil"><label for="emailIn" id="emailUser"></label><input type="text" name=""
+                id="emailIn"></div>
+            <div class="datosPerfil"><label for="nameIn" id="nameLastName"></label><input type="text" id="nameIn"
+                disabled></div>
+            <div class="datosPerfil"><label for="docIn" id="docUser"></label><input type="text" name="" id="docIn"
+                disabled></div>
+            <div class="datosPerfil"><label for="phoneIn" id="phoneUser"></label><input type="number" name=""
+                id="phoneIn" onkeydown="return event.keyCode !== 69"></div>
+            <div class="datosPerfil"><label for="cardIn" id="cardNumber"></label><input id="cardIn" type="text"
+                pattern="[0-9]*" maxlength="16" onkeydown="return event.keyCode !== 69"></div>
+            <div class="datosPerfil"><label for="ccvIn" id="ccvNumber"></label><input type="text" name="" id="ccvIn"
+                maxlength="4" onkeydown="return event.keyCode !== 69"></div>
             <button id="btnCambiarDatosUser" class="btn btnPerfil">Aceptar</button>
             <hr>
             <h2>Cambiar Contraseña<img src="assets/img/edit.svg" alt="editar" style="width:20px;margin-left:4%"></h2>
-            <div class="datosPerfil"><label for="" ></label>Contraseña Nueva<input type="text" id="passN"></div>
-            <div class="datosPerfil"><label for="" ></label>Confirme Contraseña<input type="text" id="passConfN"></div>
+            <div class="datosPerfil"><label for=""></label>Contraseña Nueva<input type="text" id="passN"></div>
+            <div class="datosPerfil"><label for=""></label>Confirme Contraseña<input type="text" id="passConfN"></div>
             <button id="btnCambiarPass" class="btn btnPerfil">Aceptar</button>
           </div>
-    </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- Boton modoOscuro -->
-  
-<a id="darkModeButton"></a>
+  <!-- Boton modoOscuro -->
 
-<!-- footer -->
-<footer id="footer">
-    
-  <div class="copyright">
-    <p>
-      ©<b>CAMATSGO.SA fintech</b> 2021.
-    </p>
-  </div>
-</div>
-</footer>
+  <a id="darkModeButton"></a>
+
+  <!-- footer -->
+  <footer id="footer">
+
+    <div class="copyright">
+      <p>
+        ©<b>CAMATSGO.SA fintech</b> 2021.
+      </p>
+    </div>
+    </div>
+  </footer>
 
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-    <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
-    <script src="assets/js/main.js" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+  <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+  <script src="assets/js/main.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
 
-  </body>
+</body>
+
 </html>

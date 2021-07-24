@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
 
-    <title>
-      
-        Vista Principal &middot; 
-      
-    </title>
-    
-    <script src="assets/js/sorttable.js"></script>
-    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/toolkit-inverse.css" rel="stylesheet">
-    <link href="assets/css/application.css" rel="stylesheet">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
 
-    <style>
-      /* note: this is a hack for ios iframe for bootstrap themes shopify page */
-      /* this chunk of css is not part of the toolkit :) */
-      body {
-        width: 1px;
-        min-width: 100%;
-        *width: 100%;
-      }
-    </style>
-  </head>
-  <script type='text/javascript'>
-    const impideEntrar = () => {
+  <title>
 
-      let a = localStorage.getItem('id');
-      alert(a);
+    Vista Principal &middot;
+
+  </title>
+
+  <script src="assets/js/sorttable.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/toolkit-inverse.css" rel="stylesheet">
+  <link href="assets/css/application.css" rel="stylesheet">
+
+  <style>
+    /* note: this is a hack for ios iframe for bootstrap themes shopify page */
+    /* this chunk of css is not part of the toolkit :) */
+    body {
+      width: 1px;
+      min-width: 100%;
+      *width: 100%;
+    }
+  </style>
+</head>
+<script type='text/javascript'>
+  const impideEntrar = () => {
+
+    let a = localStorage.getItem('id');
+    alert(a);
 
   }
-  </script>
+</script>
 
 <body>
 
 
-    <!-- Menú -->
-    <nav class="navbar navbar-expand-lg navbar-primary bg-light">
-      <a class="navbar-brand" href="#">CAMATSGO</a>
-      <label id="precioBtc" style="text-align: end; margin-right: 30px;">Precio BTC</label>        
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-       
-      </div>
+  <!-- Menú -->
+  <nav class="navbar navbar-expand-lg navbar-primary bg-light">
+    <a class="navbar-brand" href="#">CAMATSGO</a>
+    <label id="precioBtc" style="text-align: end; margin-right: 30px;">Precio BTC</label>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    </div>
   </nav>
 
 
@@ -58,177 +59,184 @@
       <div class="col-md-3 sidebar">
         <nav class="sidebar-nav">
           <div class="sidebar-header">
-            <button class="nav-toggler nav-toggler-md sidebar-toggler" type="button" data-toggle="collapse" data-target="#nav-toggleable-md">
+            <button class="nav-toggler nav-toggler-md sidebar-toggler" type="button" data-toggle="collapse"
+              data-target="#nav-toggleable-md">
               <span class="sr-only">Toggle nav</span>
             </button>
-            
-          </div>
-                  <!--MENU-->
-                  <div class="collapse nav-toggleable-md" id="nav-toggleable-md">
-                    <ul class="nav nav-pills nav-stacked flex-column">
-                      <li class="nav-header">Menú</li>
-                      <li class="nav-item">
-                        <a id="vistaP"class="nav-link" href='home.html'>Vista Principal</a>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Billetera
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a id="vistaBARS" class="dropdown-item" href="home.html">Pesos Argentinos</a>
-                          <a id="vistaBBTC" class="dropdown-item" href="BTCWallet.html">BTC</a>
-                        </div>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Operaciones
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a id="opARS" class="dropdown-item" href="homeOperation.html">Pesos Argentinos</a>
-                          <a id="opBTC" class="dropdown-item" href="homeOperationBtcWallet.html">BTC</a>
-                        </div>
-                        <li class="nav-item">
-                          <a id="miPerfil" class="nav-link" href="miPerfil.html">Mi Perfil</a>
-                        </li>
-                      </li>
-                      <li class="nav-item">
-                        <a id="logout" class="nav-link "href="../index.html" >Cerrar Sesion</a>
-                      </li>
-                    </ul>
-                    <hr class="visible-xs mt-3">
-                    <ul class="nav nav-pills nav-stacked flex-column">
-                    <li class="nav-item">
-                      <a id="deleteAcc" class="nav-link " href="#">Darse de baja</a>
-                    </li>
-                  </ul>
-                  </div>
 
-            <!--FIN MENU-->
+          </div>
+          <!--MENU-->
+          <div class="collapse nav-toggleable-md" id="nav-toggleable-md">
+            <ul class="nav nav-pills nav-stacked flex-column">
+              <li class="nav-header">Menú</li>
+              <li class="nav-item">
+                <a id="vistaP" class="nav-link" href='home.html'>Vista Principal</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  Billetera
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a id="vistaBARS" class="dropdown-item" href="home.html">Pesos Argentinos</a>
+                  <a id="vistaBBTC" class="dropdown-item" href="BTCWallet.html">BTC</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  Operaciones
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a id="opARS" class="dropdown-item" href="homeOperation.html">Pesos Argentinos</a>
+                  <a id="opBTC" class="dropdown-item" href="homeOperationBtcWallet.html">BTC</a>
+                </div>
+              <li class="nav-item">
+                <a id="miPerfil" class="nav-link" href="miPerfil.html">Mi Perfil</a>
+              </li>
+              </li>
+              <li class="nav-item">
+                <a id="logout" class="nav-link " href="../index.html">Cerrar Sesion</a>
+              </li>
+            </ul>
+            <hr class="visible-xs mt-3">
+            <ul class="nav nav-pills nav-stacked flex-column">
+              <li class="nav-item">
+                <a id="deleteAcc" class="nav-link " href="#">Darse de baja</a>
+              </li>
+            </ul>
+          </div>
+
+          <!--FIN MENU-->
         </nav>
       </div>
       <div class="col-md-9 content">
         <div class="dashhead">
-  <div class="dashhead-titles">
-    <h2 class="dashhead-title">Billetera Pesos Argentinos
-    </h2>
-  </div>
-  
-  <div class="btn-toolbar dashhead-toolbar">
-    <div id="fechaYHora"></div>
-    <!--Fecha y hora-->
-  </div>
-  </div>
-  <div class="row">
-  <div class="col-md-6 mb-4 mt-5 text-right walletDiv">
-    <!--Símbolo con saldo-->
-    <img src="assets/img/arspesos.png" alt="Pesos Argentinos">
-    <p id="saldoARS"></p>
-    <!---->
-  </div>
-  <div class="col-md-6 mb-4 mt-5">  
-  <div class="w-3 mx-auto">
-  </div>
-   <!--Circulo con saldos-->   
-  <canvas id="circuloDona" width="400" height="400">
-  </canvas>
+          <div class="dashhead-titles">
+            <h2 class="dashhead-title">Billetera Pesos Argentinos
+            </h2>
+          </div>
+
+          <div class="btn-toolbar dashhead-toolbar">
+            <div id="fechaYHora"></div>
+            <!--Fecha y hora-->
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-4 mt-5 text-right walletDiv">
+            <!--Símbolo con saldo-->
+            <img src="assets/img/arspesos.png" alt="Pesos Argentinos">
+            <p id="saldoARS"></p>
+            <!---->
+          </div>
+          <div class="col-md-6 mb-4 mt-5">
+            <div class="w-3 mx-auto">
+            </div>
+            <!--Circulo con saldos-->
+            <canvas id="circuloDona" width="400" height="400">
+            </canvas>
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="mt-5 mb-3 col-md-12 text-center">
+        <hr class="mt-3">
+        <a id="bindex" href="homeOperation.html" class="btn btn-outline-primary px-3">Depósitos y Retiros</a>
+      </div>
+
+
+
 
     </div>
   </div>
-</div>
 
-
-
-
-  
-<div class="mt-5 mb-3 col-md-12 text-center">
-  <hr class="mt-3">
-  <a id="bindex" href="homeOperation.html" class="btn btn-outline-primary px-3">Depósitos y Retiros</a>
-</div>
-
-
-
-
-</div>
-</div>
-
-<div class="container">
-<hr class="mt-5">
+  <div class="container">
+    <hr class="mt-5">
     <div class="dashhead-titles">
       <h2 class="dashhead-title">Historial de Transacciones</h2>
     </div>
 
-  
-  <div class="flextable table-actions">
-    <div class="flextable-item">
-      <div class="btn-group">
-        <button id="botonBorrar" type="button" class="btn btn-outline-primary">
-          <span class="icon icon-erase"></span>
-        </button>
+
+    <div class="flextable table-actions">
+      <div class="flextable-item">
+        <div class="btn-group">
+          <button id="botonBorrar" type="button" class="btn btn-outline-primary">
+            <span class="icon icon-erase"></span>
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-  
-  <div class="table-responsive">
-    <table class="table sortable" data-sort="table">
-      <thead>
-        <tr>
-          <th><input type="checkbox" class="select-all" id="selectAll"></th>
-          <th>Orden</th>
-          <th>Tipo Operación</th>
-          <th>Fecha</th>
-          <th>Importe</th>
-        </tr>
-      </thead>
-      <tbody id="datosTablaARS">
-      </tbody>
-    </table>
-  </div>
-  
-  <div class="text-center mb-5">
-    <nav>
-      <ul class="pagination">
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-            <span class="sr-only">Previous</span>
-          </a>
-        </li>
-        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-        <li class="page-item">
-          <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-            <span class="sr-only">Next</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
+
+    <div class="table-responsive">
+      <table class="table sortable" data-sort="table">
+        <thead>
+          <tr>
+            <th><input type="checkbox" class="select-all" id="selectAll"></th>
+            <th>Orden</th>
+            <th>Tipo Operación</th>
+            <th>Fecha</th>
+            <th>Importe</th>
+          </tr>
+        </thead>
+        <tbody id="datosTablaARS">
+        </tbody>
+      </table>
+    </div>
+
+    <div class="text-center mb-5">
+      <nav>
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
   </div>
-</div>
-
-<!-- Boton modoOscuro -->
-  
-<a id="darkModeButton"></a>
-
-<!-- footer -->
-<footer id="footer">
-    
-  <div class="copyright">
-    <p>
-      ©<b>CAMATSGO.SA fintech</b> 2021.
-    </p>
   </div>
-</div>
-</footer>
+
+  <!-- Boton modoOscuro -->
+
+  <a id="darkModeButton"></a>
+
+  <!-- footer -->
+  <footer id="footer">
+
+    <div class="copyright">
+      <p>
+        ©<b>CAMATSGO.SA fintech</b> 2021.
+      </p>
+    </div>
+    </div>
+  </footer>
 
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-    <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
-    <script src="assets/js/main.js" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+  <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+  <script src="assets/js/main.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
 
-  </body>
+</body>
+
 </html>
-
